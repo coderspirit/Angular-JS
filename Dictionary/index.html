@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Synonyms Dictionary</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/lib/Angular.min.js"></script>
+	<script src="js/custom/app.js"></script>
+	<script src="js/custom/model.js"></script>
+	<script src="js/custom/controller.js"></script>
+</head>
+<body ng-app="myapp" ng-controller="myctrl">
+<div class="wrapper">
+<center>
+    <div class="head">
+     <img src="images/logo.png" style="height: 80px;width: 420px;"/>
+     <h2 style="color:blue;">Note:Type Any Word like good,hello etc.its uses Wordnik Api.</h2>
+    </div>
+    <div class="section">
+    <input ng-model="searchWord" type="text" placeholder="Type Word for Synonyms" class="txt">
+
+    <button ng-click="callMe()" class="btn">Click Me</button>
+<table border="5px solid red" style="background:aqua;color:green;">
+<tr>
+	<ul>
+       <td style="border:3px solid blue">
+        <li ng-repeat = "word in result.data[4].words|filter:searchtxt">
+<!--		<li ng-repeat = "word in result.data[4].words">-->
+        
+        {{word}}
+       
+       
+		</li>
+        </td>
+	</ul>
+</tr>
+</table>
+<!--	{{result.data[4].words}}-->
+    </div>
+    </center>
+    </div>
+</body>
+</html>

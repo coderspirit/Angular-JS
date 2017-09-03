@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WeatherInfo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel='stylesheet' href="css/bootstrap.min.css">
+    <script src="js/lib/angular.min.js"></script>
+    <script src="js/custom/app.js"></script>
+    <script src="js/custom/model.js"></script>
+    <script src="js/custom/controller.js"></script>
+    
+    <script src="js/lib/jquery-3.1.1.min.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
+    <script src="js/custom/jquery.js"></script>
+    
+</head>
+<body ng-app="myApp" ng-controller="apiController">
+  <div class="container-fluid" id="head">
+ <center> 
+     <h2>Weather Information</h2>
+
+ <div class="form">
+     <form>
+     <input type="text" ng-model="city" placeholder="Enter City Name" class="txt">
+     
+        <button ng-click="weather()" class="btn btn-primary">Submit</button>
+    </form>
+      </div>
+      
+  </center>
+  
+   <div class="info">
+      
+    <div class="img">
+        
+    <img src="http://openweathermap.org/img/w/{{weatherData.data.weather[0].icon}}.png"width="90px" height="90px"><br>
+       <h2>{{weatherData.data.weather[0].description}}</h2>
+       </div>
+       <div class="temp">   
+           <h1 color="white" style="text-align:center;margin-top:45px;font-size:60px;">
+           {{weatherData.data.main.temp}} &#8451;</h1>
+        </div>
+       <div class="wind">
+       <h4 color="white" style="text-align:center;margin-top:45px;font-size:30px;">
+       country:{{weatherData.data.sys.country}}<br>
+       pressure:{{weatherData.data.main.pressure}}hpa<br>
+       wind: {{weatherData.data.wind.speed}}m/s<br>
+        clouds:{{weatherData.data.clouds.all}}%<br>
+        humidity:{{weatherData.data.main.humidity}}%</h4>
+       </div>
+    </div>
+    </div> 
+</body>
+</html>

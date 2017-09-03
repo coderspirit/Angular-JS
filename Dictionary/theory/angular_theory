@@ -1,0 +1,22 @@
+                              MVC-Model View Controller
+step A:
+     1.make index a html file and model, controller,view as js file 
+     2.attach angular.min.js with your files.
+step2:-
+     1.create angular module by {angular.module('appname',[])} and hold in a variable.
+     2.create model by {appname.factory('model name',functions)}
+     3.create controller by{appname.controller('controller name',functions)}
+ng-app:-
+      The ng-app directive tells AngularJS that the <div> element is the "owner" of an AngularJS       application.
+ng-contoller:-
+      The ng-app directive defines the application, the ng-controller directive defines the controller.
+ng-init:-
+      The ng-init directive initializes AngularJS application variables.    
+ng-model:-
+      The ng-model directive binds the value of the input field to the application variable name.    
+$scope:-
+     1.The scope is the binding part between the HTML (view) and the JavaScript (controller).
+     2.The scope is an object with the available properties and methods.
+     3.The scope is available for both the view and the controller.
+$http:-
+     1.The AngularJS $http service makes a request to the server, and returns a response.
